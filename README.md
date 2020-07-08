@@ -9,6 +9,7 @@ This is kind of useful for audits and to maintain a standard with all IAM users.
 - The following variables must be modified:
 
 ADMIN@EXAMPLE.COM 
+
 <SNS_TOPIC>
 
 ADMIN@EXAMPLE.COM = this would be the admin email that is going to receive notifications about every user.
