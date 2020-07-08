@@ -1,6 +1,6 @@
 ---
 AWSTemplateFormatVersion: '2010-09-09'
-Description: "Template to create Access Keys Rotation Lambda"
+Description: "Template to create Access Keys Rotation Lambdas"
 Resources:
   AccessKeysRotationRole:
     Type: AWS::IAM::Role
