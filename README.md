@@ -12,6 +12,8 @@ ADMIN@EXAMPLE.COM
 
 <SNS_TOPIC>
 
+
+
 ADMIN@EXAMPLE.COM = this would be the admin email that is going to receive notifications about every user.
 
 For the <SNS_TOPIC> you could provide an ARN for an existing SNS topic or you could create it using this same template.
