@@ -1,7 +1,7 @@
 import boto3,datetime,time,sys
 iam = boto3.client("iam")
 ses = boto3.client('ses')
-SENDER = 'devops@yieldmo.com'
+SENDER = 'ADMIN@EXAMPLE.COM '
 SUBJECT = 'AWS IAM Access Key rotation (Access Key is too old.)'
 CHARSET = "UTF-8"
 def send_email(RCPT, CHARSET, BODY_HTML, SUBJECT, SENDER ):
