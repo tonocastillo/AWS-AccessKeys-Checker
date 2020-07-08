@@ -1,7 +1,7 @@
 import boto3,datetime,time
 iam = boto3.client("iam")
 ses = boto3.client('ses')
-SENDER = 'devops@yieldmo.com'
+SENDER = 'ADMIN@EXAMPLE.COM '
 SUBJECT = 'Multiple IAM user Access Keys found! Need only 1'
 CHARSET = "UTF-8"
 def send_email(RCPT, CHARSET, BODY_HTML, SUBJECT, SENDER ):
