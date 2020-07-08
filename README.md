@@ -19,3 +19,6 @@ ADMIN@EXAMPLE.COM = this would be the admin email that is going to receive notif
 For the <SNS_TOPIC> you could provide an ARN for an existing SNS topic or you could create it using this same template.
 
 - There a reference for a "Layer" in the template for the lambda functions for the "boto3" module. It was created at the time this template was created, it *might* not be needed now.
+
+
+Add the "OwnerEmailAddress" tag and the user email address in the IAM user tags tab.
