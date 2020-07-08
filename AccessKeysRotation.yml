@@ -91,7 +91,7 @@ Resources:
           import boto3,datetime,time,sys
           iam = boto3.client("iam")
           ses = boto3.client('ses')
-          SENDER = 'devops@yieldmo.com'
+          SENDER = 'ADMIN@EXAMPLE.COM'
           SUBJECT = 'AWS IAM Access Key rotation (Access Key is too old.)'
           CHARSET = "UTF-8"
           def send_email(RCPT, CHARSET, BODY_HTML, SUBJECT, SENDER ):
@@ -171,7 +171,7 @@ Resources:
           import boto3,datetime,time
           iam = boto3.client("iam")
           ses = boto3.client('ses')
-          SENDER = 'devops@yieldmo.com'
+          SENDER = 'ADMIN@EXAMPLE.COM'
           SUBJECT = 'Multiple IAM user Access Keys found! Need only 1'
           CHARSET = "UTF-8"
           def send_email(RCPT, CHARSET, BODY_HTML, SUBJECT, SENDER ):
@@ -224,9 +224,9 @@ Resources:
       AlarmName: !Join ["", [!Ref AccessKeysRotationLambda1Key, "-", "Errors" ]]
       AlarmDescription: "AccessKeysRotation Lambda Errors Alarm"
       AlarmActions:
-        - !ImportValue Opsgenie-Infrastructure
+        - <SNS_TOPIC>
       OKActions:
-        - !ImportValue Opsgenie-Infrastructure
+        - <SNS_TOPIC>
       Namespace: "AWS/Lambda"
       MetricName: "Errors"
       Dimensions:
@@ -244,9 +244,9 @@ Resources:
       AlarmName: !Join ["", [!Ref AccessKeysRotationLambda1Key, "-", "Invocations" ]]
       AlarmDescription: "AccessKeysRotation Lambda Invocations Alarm"
       AlarmActions:
-        - !ImportValue Opsgenie-Infrastructure
+        - <SNS_TOPIC>
       OKActions:
-        - !ImportValue Opsgenie-Infrastructure
+        - <SNS_TOPIC>
       Namespace: "AWS/Lambda"
       MetricName: "Invocations"
       Dimensions:
